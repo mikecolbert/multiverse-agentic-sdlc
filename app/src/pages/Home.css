@@ -1,0 +1,126 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: var(--space-6);
+}
+
+.home__greeting h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.home__subtext {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Streak */
+.home__streak {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background-color: var(--color-accent-warm);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+}
+
+.home__streak-count {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+}
+
+.home__streak-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Actions */
+.home__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-on-primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-size: var(--font-size-base);
+  padding: var(--space-4) var(--space-6);
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.btn--large {
+  min-height: 72px;
+}
+
+.btn__hint {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  opacity: 0.8;
+  margin-top: var(--space-1);
+}
+
+/* Help */
+.home__help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer */
+.home__footer {
+  text-align: center;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.home__crisis-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.home__crisis-link:hover {
+  color: var(--color-text);
+}
