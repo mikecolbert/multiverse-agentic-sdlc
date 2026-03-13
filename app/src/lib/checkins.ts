@@ -20,6 +20,7 @@ export function buildRecord(
   fields: Omit<CheckInRecord, 'id' | 'timestamp' | 'highIntensity'>
 ): CheckInRecord {
   return {
+    dayRating: null,   // default; reflective mode overrides this
     ...fields,
     id: generateId(),
     timestamp: new Date().toISOString(),

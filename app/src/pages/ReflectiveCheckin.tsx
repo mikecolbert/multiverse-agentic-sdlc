@@ -1,12 +1,5 @@
-import { Link } from 'react-router-dom'
-import './Placeholder.css'
+import { CheckInWizard } from '../components/checkin/CheckInWizard'
 
 export function ReflectiveCheckin() {
-  return (
-    <div className="placeholder">
-      <h1>End of Day Reflection</h1>
-      <p>This flow is coming in Phase 3.</p>
-      <Link to="/" className="placeholder__back">← Back home</Link>
-    </div>
-  )
+  return <CheckInWizard mode="reflective" />
 }

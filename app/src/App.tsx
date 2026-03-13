@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { QuickCheckin } from './pages/QuickCheckin'
 import { ReflectiveCheckin } from './pages/ReflectiveCheckin'
 import { CheckInComplete } from './pages/CheckInComplete'
+import { ReflectiveComplete } from './pages/ReflectiveComplete'
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
         <Route path="/checkin/quick" element={<QuickCheckin />} />
         <Route path="/checkin/reflective" element={<ReflectiveCheckin />} />
         <Route path="/checkin/complete" element={<CheckInComplete />} />
-        {/* Phase 4 & 6 routes — placeholders until those phases are built */}
+        <Route path="/checkin/reflective/complete" element={<ReflectiveComplete />} />
+        {/* Phase 4 & 5 & 6 routes — placeholders until those phases are built */}
         <Route path="/regulate" element={<Navigate to="/" replace />} />
+        <Route path="/journal-prompts" element={<Navigate to="/" replace />} />
         <Route path="/crisis-support" element={<Navigate to="/" replace />} />
         {/* Catch-all */}
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -8,6 +8,20 @@
 /* Header */
 .wizard__header {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.wizard__mode-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+}
+
+.wizard__header-row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
