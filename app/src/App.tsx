@@ -7,6 +7,7 @@ import { CheckInComplete } from './pages/CheckInComplete'
 import { ReflectiveComplete } from './pages/ReflectiveComplete'
 import { RegulateScreen } from './pages/RegulateScreen'
 import { GuidedPage } from './pages/GuidedPage'
+import { CrisisSupportScreen } from './pages/CrisisSupportScreen'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/regulate/:techniqueId" element={<GuidedPage />} />
         {/* Phase 5 & 6 routes — placeholders until those phases are built */}
         <Route path="/journal-prompts" element={<Navigate to="/" replace />} />
-        <Route path="/crisis-support" element={<Navigate to="/" replace />} />
+        <Route path="/crisis-support" element={<CrisisSupportScreen />} />
         {/* Catch-all */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

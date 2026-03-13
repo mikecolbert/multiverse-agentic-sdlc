@@ -1,4 +1,5 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
+import { CrisisBanner } from '../components/crisis/CrisisBanner'
 import './ReflectiveComplete.css'
 
 interface ReflectiveCompleteState {
@@ -33,15 +34,7 @@ export function ReflectiveComplete() {
         </p>
       </div>
 
-      {highIntensity && (
-        <div className="reflective-complete__crisis-banner">
-          <p>
-            If things feel really heavy right now, you don't have to carry
-            it alone.{' '}
-            <Link to="/crisis-support">Support is available.</Link>
-          </p>
-        </div>
-      )}
+      {highIntensity && <CrisisBanner />}
 
       <div className="reflective-complete__actions">
         <button

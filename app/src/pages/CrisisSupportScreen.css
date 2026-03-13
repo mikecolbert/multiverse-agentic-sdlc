@@ -1,0 +1,112 @@
+.crisis-support {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: var(--space-4);
+}
+
+.crisis-support__intro h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-tight);
+}
+
+.crisis-support__intro p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Resource cards */
+.crisis-support__resources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.resource-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.resource-card--primary {
+  border-color: var(--color-secondary);
+  background-color: #f0f7f0;
+}
+
+.resource-card--international {
+  border-color: var(--color-accent-calm);
+  background-color: #f0f4f8;
+}
+
+.resource-card__icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.resource-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.resource-card__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.resource-card__detail {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.resource-card__sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Emergency note */
+.crisis-support__note {
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.crisis-support__note p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Home link */
+.crisis-support__home {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  padding-bottom: var(--space-4);
+}
+
+.crisis-support__home:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}

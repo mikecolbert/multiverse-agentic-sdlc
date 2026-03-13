@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import { CrisisBanner } from '../components/crisis/CrisisBanner'
 import './CheckInComplete.css'
 
 export function CheckInComplete() {
@@ -13,14 +14,7 @@ export function CheckInComplete() {
         <p>Noticing how you feel is the first step. That takes courage.</p>
       </div>
 
-      {highIntensity && (
-        <div className="complete__crisis-banner">
-          <p>
-            If things feel really heavy right now, you don't have to carry it alone.{' '}
-            <Link to="/crisis-support">Support is available.</Link>
-          </p>
-        </div>
-      )}
+      {highIntensity && <CrisisBanner />}
 
       <div className="complete__actions">
         <Link to="/regulate" className="complete__btn complete__btn--primary">
