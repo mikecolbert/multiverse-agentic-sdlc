@@ -5,6 +5,8 @@ import { QuickCheckin } from './pages/QuickCheckin'
 import { ReflectiveCheckin } from './pages/ReflectiveCheckin'
 import { CheckInComplete } from './pages/CheckInComplete'
 import { ReflectiveComplete } from './pages/ReflectiveComplete'
+import { RegulateScreen } from './pages/RegulateScreen'
+import { GuidedPage } from './pages/GuidedPage'
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
         <Route path="/checkin/reflective" element={<ReflectiveCheckin />} />
         <Route path="/checkin/complete" element={<CheckInComplete />} />
         <Route path="/checkin/reflective/complete" element={<ReflectiveComplete />} />
-        {/* Phase 4 & 5 & 6 routes — placeholders until those phases are built */}
-        <Route path="/regulate" element={<Navigate to="/" replace />} />
+        <Route path="/regulate" element={<RegulateScreen />} />
+        <Route path="/regulate/:techniqueId" element={<GuidedPage />} />
+        {/* Phase 5 & 6 routes — placeholders until those phases are built */}
         <Route path="/journal-prompts" element={<Navigate to="/" replace />} />
         <Route path="/crisis-support" element={<Navigate to="/" replace />} />
         {/* Catch-all */}

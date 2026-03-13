@@ -1,0 +1,126 @@
+.technique-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition-fast);
+}
+
+.technique-card--open {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-light);
+}
+
+.technique-card__header {
+  padding: var(--space-5) var(--space-5) 0;
+}
+
+.technique-card__name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.technique-card__tagline {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Action row */
+.technique-card__actions {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  flex-wrap: wrap;
+}
+
+.technique-card__remind {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  background: none;
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.technique-card__remind:hover {
+  background-color: var(--color-surface-raised);
+}
+
+.technique-card__guide {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-on-primary);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  white-space: nowrap;
+}
+
+.technique-card__guide:hover {
+  opacity: 0.9;
+}
+
+/* Expanded steps list */
+.technique-card__steps {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0 var(--space-5) var(--space-5);
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.technique-card__step {
+  counter-increment: step-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+}
+
+.technique-card__step::before {
+  content: counter(step-counter);
+  min-width: 22px;
+  height: 22px;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.technique-card__step-text {
+  flex: 1;
+}
+
+.technique-card__step-duration {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background-color: var(--color-accent-warm);
+  border-radius: var(--radius-full);
+  padding: 1px var(--space-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
