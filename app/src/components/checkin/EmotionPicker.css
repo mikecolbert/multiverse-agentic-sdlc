@@ -1,0 +1,85 @@
+.emotion-picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.emotion-picker__prompt {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.emotion-picker__back {
+  align-self: flex-start;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.emotion-picker__back:hover {
+  color: var(--color-text);
+}
+
+/* Category list — full-width stacked buttons */
+.emotion-picker__categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.emotion-category {
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--chip-color, var(--color-surface-raised));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.emotion-category:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.emotion-category:active {
+  transform: translateY(0);
+}
+
+/* Specific emotion chips — wrapping grid */
+.emotion-picker__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.emotion-chip {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--chip-color, var(--color-surface-raised));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.emotion-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.emotion-chip:active {
+  transform: translateY(0);
+}

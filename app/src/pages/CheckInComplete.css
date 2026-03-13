@@ -1,0 +1,92 @@
+.complete {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+  text-align: center;
+}
+
+.complete__affirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.complete__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.complete__affirmation h1 {
+  font-size: var(--font-size-xl);
+}
+
+.complete__affirmation p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Crisis banner — warm amber, non-alarming */
+.complete__crisis-banner {
+  background-color: #fdf6ec;
+  border: 1px solid var(--color-caution);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+}
+
+.complete__crisis-banner p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.complete__crisis-banner a {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-dark);
+}
+
+/* Actions */
+.complete__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.complete__btn {
+  display: block;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.complete__btn:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.complete__btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+
+.complete__btn--ghost {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}

@@ -1,0 +1,2 @@
+export const INTENSITY_HIGH_THRESHOLD = 4
+export const CHECKIN_RECORD_CAP = 90

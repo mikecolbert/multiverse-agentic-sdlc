@@ -1,0 +1,128 @@
+.wizard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-2);
+}
+
+/* Header */
+.wizard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wizard__step-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.wizard__progress {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.wizard__progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border);
+  transition: background-color var(--transition-base);
+}
+
+.wizard__progress-dot--active {
+  background-color: var(--color-primary);
+  width: 20px;
+}
+
+.wizard__progress-dot--done {
+  background-color: var(--color-secondary);
+}
+
+/* Title */
+.wizard__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+/* Content area */
+.wizard__content {
+  flex: 1;
+}
+
+/* Summary */
+.wizard__summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.summary-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-lg);
+}
+
+.summary-row__label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.summary-row__value {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.summary-row__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.wizard__summary-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+.wizard__confirm {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.wizard__confirm:hover {
+  opacity: 0.9;
+}
+
+/* Back */
+.wizard__back {
+  align-self: flex-start;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.wizard__back:hover {
+  color: var(--color-text);
+}
