@@ -4,7 +4,8 @@ import './CheckInComplete.css'
 
 export function CheckInComplete() {
   const location = useLocation()
-  const highIntensity = location.state?.highIntensity === true
+  const state = location.state ?? {}
+  const { highIntensity, emotion, emotionCategory, intensity } = state
 
   return (
     <div className="complete">
@@ -17,7 +18,14 @@ export function CheckInComplete() {
       {highIntensity && <CrisisBanner />}
 
       <div className="complete__actions">
-        <Link to="/regulate" className="complete__btn complete__btn--primary">
+        <Link
+          to="/journal-prompts"
+          state={{ emotion, emotionCategory, intensity, mode: 'quick' }}
+          className="complete__btn complete__btn--primary"
+        >
+          See journal prompts
+        </Link>
+        <Link to="/regulate" className="complete__btn complete__btn--secondary">
           I want help right now
         </Link>
         <Link to="/" className="complete__btn complete__btn--ghost">

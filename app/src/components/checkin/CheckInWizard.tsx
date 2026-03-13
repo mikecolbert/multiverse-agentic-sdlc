@@ -96,7 +96,12 @@ export function CheckInWizard({ mode = 'quick' }: CheckInWizardProps) {
       })
     } else {
       navigate('/checkin/complete', {
-        state: { highIntensity: record.highIntensity },
+        state: {
+          highIntensity:     record.highIntensity,
+          emotion:           state.emotion,
+          emotionCategory:   record.emotionCategory,
+          intensity:         state.intensity,
+        },
       })
     }
   }
