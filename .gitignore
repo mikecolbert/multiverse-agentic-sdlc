@@ -1,0 +1,56 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+#VS Code workspace file
+# .VSCode
+# VS Code settings (optional: keep if you want to share with students)
+# .vscode/
+
+# Logs and environments
+*.log
+.env
+*.env
+
+# pre-commit cache
+.pre-commit-config.yaml~
+.pre-commit/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+#Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Python egg files
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# MyPy and Bandit
+.mypy_cache/
+.bandit/
+
+#R
+.Rproj.user
+.Rdata
+.Rhistory
+
+#environment file for AWS Beanstalk
+.ebextensions/environment_variables.config
